@@ -1,0 +1,61 @@
+﻿<Window x:Class="ProjectWPF.Windows.AboutMashina"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectWPF.Windows"
+        mc:Ignorable="d"
+        Title="AboutMashina" Height="400" Width="300">
+    <Grid>
+        <StackPanel Background="LightGray" x:Name="StackAboutMashina" Orientation="Vertical">
+            <Label Content="Детали:" HorizontalAlignment="Left" FontSize="20"/>
+            <WrapPanel x:Name="Proizv">
+                <Label Content="Производитель:" FontWeight="Bold" />
+                <Label/>
+            </WrapPanel>
+            <WrapPanel x:Name="Mod">
+                <Label Content="Модель:" FontWeight="Bold" />
+                <Label/>
+            </WrapPanel>
+            <WrapPanel x:Name="GodVyp">
+                <Label Content="Год выспуска:" FontWeight="Bold" />
+                <Label/>
+            </WrapPanel>
+            <WrapPanel x:Name="SerNov">
+                <Label Content="Серийный номер:" FontWeight="Bold" />
+                <Label/>
+            </WrapPanel>
+            <WrapPanel x:Name="Group">
+                <Label Content="Группа:" FontWeight="Bold" />
+                <Label/>
+            </WrapPanel>
+            <WrapPanel x:Name="Modif">
+                <Label Content="Модификация:" FontWeight="Bold" />
+                <Label/>
+            </WrapPanel>
+            <WrapPanel x:Name="smc">
+                <Label Content="SMCS модификация:" FontWeight="Bold" />
+                <Label/>
+            </WrapPanel>
+            <WrapPanel x:Name="Razm">
+                <Label Content="Размер:" FontWeight="Bold" />
+                <Label/>
+            </WrapPanel>
+            <Label/>
+            <Label/>
+            <WrapPanel x:Name="Vd">
+                <Label Content="В день:" FontWeight="Bold" />
+                <Label/>
+            </WrapPanel>
+            <WrapPanel x:Name="Vn">
+                <Label Content="В неделю:" FontWeight="Bold" />
+                <Label/>
+            </WrapPanel>
+            <WrapPanel x:Name="StM">
+                <Label Content="Статус машины:" FontWeight="Bold" />
+                <Label/>
+            </WrapPanel>
+            <Button x:Name="CloseAboutM" Content="Закрыть" HorizontalAlignment="Center" Click="CloseAboutM_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

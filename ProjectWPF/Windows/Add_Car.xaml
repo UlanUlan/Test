@@ -1,0 +1,371 @@
+﻿<Window x:Class="ProjectWPF.Windows.Add_Car"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectWPF.Windows"
+        mc:Ignorable="d"
+        Title="Add_Car" Height="550" Width="650">
+
+    <Window.Resources>
+        <Style x:Key="GarazhnyiNomer" TargetType="Label">
+            <Style.Setters>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Label">
+                            <Border BorderBrush="White" BorderThickness="0 0.7 0 0" x:Name="border" Background="Gray">
+                                <StackPanel Orientation="Horizontal" >
+                                    <Image Source="../IMG/List.png"  VerticalAlignment="Center" Margin="5">
+                                    </Image>
+                                    <ContentPresenter Margin="1" VerticalAlignment="Center">
+                                    </ContentPresenter>
+                                </StackPanel>
+                            </Border>
+                        </ControlTemplate>
+
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Foreground" Value="Black"></Setter>
+            </Style.Setters>
+        </Style>
+
+        <Style x:Key="Proizdovitel" TargetType="Label">
+            <Style.Setters>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Label">
+                            <Border BorderBrush="White" BorderThickness="0 0.7 0 0" x:Name="border" Background="Gray">
+                                <StackPanel Orientation="Horizontal" >
+                                    <Image Source="../IMG/Woks.png"  VerticalAlignment="Center" Margin="5">
+                                    </Image>
+                                    <ContentPresenter Margin="1" VerticalAlignment="Center">
+                                    </ContentPresenter>
+                                </StackPanel>
+                            </Border>
+                        </ControlTemplate>
+
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Foreground" Value="Black"></Setter>
+            </Style.Setters>
+        </Style>
+
+        <Style x:Key="ModelMashiny" TargetType="Label">
+            <Style.Setters>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Label">
+                            <Border BorderBrush="White" BorderThickness="0 0.7 0 0" x:Name="border" Background="Gray">
+                                <StackPanel Orientation="Horizontal" >
+                                    <Image Source="../IMG/Tools.png"  VerticalAlignment="Center" Margin="5">
+                                    </Image>
+                                    <ContentPresenter Margin="1" VerticalAlignment="Center">
+                                    </ContentPresenter>
+                                </StackPanel>
+                            </Border>
+                        </ControlTemplate>
+
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Foreground" Value="Black"></Setter>
+            </Style.Setters>
+        </Style>
+
+        <Style x:Key="GodVypuska" TargetType="Label">
+            <Style.Setters>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Label">
+                            <Border BorderBrush="White" BorderThickness="0 0.7 0 0" x:Name="border" Background="Gray">
+                                <StackPanel Orientation="Horizontal" >
+                                    <Image Source="../IMG/Cal.png"  VerticalAlignment="Center" Margin="5">
+                                    </Image>
+                                    <ContentPresenter Margin="1" VerticalAlignment="Center">
+                                    </ContentPresenter>
+                                </StackPanel>
+                            </Border>
+                        </ControlTemplate>
+
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Foreground" Value="Black"></Setter>
+            </Style.Setters>
+        </Style>
+
+        <Style x:Key="Prekifs" TargetType="Label">
+            <Style.Setters>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Label">
+                            <Border BorderBrush="White" BorderThickness="0 0.7 0 0" x:Name="border" Background="Gray">
+                                <StackPanel Orientation="Horizontal" >
+                                    <Image Source="../IMG/CHeck.png"  VerticalAlignment="Center" Margin="5">
+                                    </Image>
+                                    <ContentPresenter Margin="1" VerticalAlignment="Center">
+                                    </ContentPresenter>
+                                </StackPanel>
+                            </Border>
+                        </ControlTemplate>
+
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Foreground" Value="Black"></Setter>
+            </Style.Setters>
+        </Style>
+
+        <Style x:Key="SeriynyiNomer" TargetType="Label">
+            <Style.Setters>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Label">
+                            <Border BorderBrush="White" BorderThickness="0 0.7 0 0" x:Name="border" Background="Gray">
+                                <StackPanel Orientation="Horizontal" >
+                                    <Image Source="../IMG/Docs.png"  VerticalAlignment="Center" Margin="5">
+                                    </Image>
+                                    <ContentPresenter Margin="1" VerticalAlignment="Center">
+                                    </ContentPresenter>
+                                </StackPanel>
+                            </Border>
+                        </ControlTemplate>
+
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Foreground" Value="Black"></Setter>
+            </Style.Setters>
+        </Style>
+
+        <Style x:Key="OstalnyeTextBoksy" TargetType="Label">
+            <Style.Setters>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Label">
+                            <Border BorderBrush="White" BorderThickness="0 0.7 0 0" x:Name="border" Background="Gray">
+                                <StackPanel Orientation="Horizontal" >
+                                    <Image Source="../IMG/Mech.png"  VerticalAlignment="Center" Margin="5">
+                                    </Image>
+                                    <ContentPresenter Margin="1" VerticalAlignment="Center">
+                                    </ContentPresenter>
+                                </StackPanel>
+                            </Border>
+                        </ControlTemplate>
+
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="Foreground" Value="Black"></Setter>
+            </Style.Setters>
+        </Style>
+
+        <Style x:Key="StyleForButtonClose">
+            <Setter Property="Control.FontSize" Value="20"></Setter>
+            <Setter Property="Control.Background" Value="White"></Setter>
+            <Setter Property="Control.Foreground" Value="Gray"></Setter>
+            <Setter Property="Control.FontFamily" Value="Lucida Bright"></Setter>
+            <Setter Property="Control.Margin" Value="10"/>
+        </Style>
+
+        <Style x:Key="StyleForButtonAddM">
+            <Setter Property="Control.FontSize" Value="20"></Setter>
+            <Setter Property="Control.Background" Value="DeepSkyBlue"></Setter>
+            <Setter Property="Control.Foreground" Value="White"></Setter>
+            <Setter Property="Control.FontFamily" Value="Lucida Bright"></Setter>
+            <Setter Property="Control.Margin" Value="10"/>
+        </Style>
+
+
+    </Window.Resources>
+
+
+
+    <TabControl x:Name="AddCarsTabs" Background="LightYellow" Margin="10">
+        <TabItem x:Name="Detali" Header="Детали">
+            <TabItem.Content>
+                <Grid>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel x:Name="DetaliStackSleva" Orientation="Vertical" Grid.Column="0">
+                        <Label Content="Детали" HorizontalAlignment="Left" FontSize="20"/>
+                        <Label Content="Гаражный номер машины" HorizontalAlignment="Right" Margin="5"/>
+                        <Label Content="Производитель" HorizontalAlignment="Right" Margin="5"/>
+                        <Label Content="Модель машины" HorizontalAlignment="Right" Margin="5"/>
+                        <Label Content="Год выпуска" HorizontalAlignment="Right" Margin="5"/>
+                        <Label Content="Префикс" HorizontalAlignment="Right" Margin="5"/>
+                        <Label Content="Серийный номер машины" HorizontalAlignment="Right"/>
+                        <Button Content="Close" Style="{StaticResource StyleForButtonClose}" HorizontalAlignment="Center"/>
+                    </StackPanel>
+
+                    <StackPanel x:Name="DetaliStackSprava" Orientation="Vertical" Grid.Column="1">
+                        <Label/>
+                        <Label/>
+                        <Label/>
+                        <WrapPanel x:Name="Garazh" Margin="2">
+                            <Label x:Name="Mashinka" Style="{StaticResource GarazhnyiNomer}"/>
+                            <TextBox x:Name="GarazhNomer" Width="200"/>
+                        </WrapPanel>
+                        <WrapPanel x:Name="Proizv" Margin="2">
+                            <Label x:Name="Tors" Style="{StaticResource Proizdovitel}"/>
+                            <ComboBox x:Name="Proizvoditel" Width="200">
+
+                            </ComboBox>
+                        </WrapPanel>
+                        <WrapPanel x:Name="ModelM">
+                            <Label x:Name="Gaechka" Style="{StaticResource ModelMashiny}"/>
+                            <ComboBox x:Name="ModelMashiny" Width="200">
+
+                            </ComboBox>
+                        </WrapPanel>
+                        <WrapPanel x:Name="GodV" Margin="2">
+                            <Label x:Name="Calk" Style="{StaticResource GodVypuska}"/>
+                            <TextBox x:Name="GodVypuska" Width="200"/>
+                        </WrapPanel>
+                        <WrapPanel x:Name="Pref">
+                            <Label x:Name="Bloknot" Style="{StaticResource Prekifs}"/>
+                            <ComboBox x:Name="Prekifs" Width="200">
+
+                            </ComboBox>
+                        </WrapPanel>
+                        <WrapPanel x:Name="SeriynyiN" Margin="2">
+                            <Label x:Name="Listok" Style="{StaticResource SeriynyiNomer}"/>
+                            <TextBox x:Name="SeriynyiNomer" Width="200"/>
+                        </WrapPanel>
+
+
+                        <Button x:Name="AddM" Content="Добавить" Style="{StaticResource StyleForButtonAddM}" HorizontalAlignment="Center" />
+
+
+                    </StackPanel>
+                </Grid>
+            </TabItem.Content>
+        </TabItem>
+        <TabItem x:Name="Ispolzovanie" Header="Использование">
+            <TabItem.Content>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="171.5"/>
+                        <ColumnDefinition Width="28.5"/>
+                        <ColumnDefinition Width="21*" />
+                        <ColumnDefinition Width="391*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Content="Последняя запись" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0" FontSize="20" Grid.ColumnSpan="2"/>
+                    <Label Content="Дата последней записи" HorizontalAlignment="Right" Margin="0,5,5,5" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <Label Content="Последние мото-часы" HorizontalAlignment="Right" Margin="0,5,5,5" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <Label Content="Общая наработка" HorizontalAlignment="Right" Margin="0,5,5,5" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <Label Content="Активная" HorizontalAlignment="Right" Margin="0,5,5,5" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <Label Content="КТГ" HorizontalAlignment="Right" Margin="0,5,5,5" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <Label Content="Консервация" HorizontalAlignment="Right" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <Label Content="Моточасы" HorizontalAlignment="Right" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"/>
+                    <Button Content="Close" Style="{StaticResource StyleForButtonClose}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="8" Margin="71,11,43,11"/>
+
+                    <DatePicker  x:Name="DataPoslZapisi" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Width="200" Margin="0,14" Grid.ColumnSpan="2"/>
+                    <WrapPanel x:Name="PoslMotCh" Margin="2" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2">
+                        <Label x:Name="Solnce" Style="{StaticResource OstalnyeTextBoksy}"/>
+                        <TextBox x:Name="PoslednieMotoChasy" Width="225"/>
+                    </WrapPanel>
+                    <WrapPanel x:Name="ObshNar" Margin="2" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2">
+                        <Label x:Name="Solnce1" Style="{StaticResource OstalnyeTextBoksy}"/>
+                        <TextBox x:Name="ObshyayaNarabotka" Width="225"/>
+                    </WrapPanel>
+                    <CheckBox  VerticalAlignment="Center" Grid.Column="2" Grid.Row="4" x:Name="Aktivnaya" IsThreeState="True" IsChecked="{x:Null}" Margin="0,20" Grid.ColumnSpan="2"/>
+                    <CheckBox  VerticalAlignment="Center" Grid.Column="2" Grid.Row="5" x:Name="KTG" IsThreeState="True" IsChecked="{x:Null}" Margin="0,20" Grid.ColumnSpan="2"/>
+                    <CheckBox  VerticalAlignment="Center" Grid.Column="2" Grid.Row="6" x:Name="Konservaciya" IsThreeState="True" IsChecked="{x:Null}" Margin="0,20" Grid.ColumnSpan="2"/>
+                    <CheckBox  VerticalAlignment="Center" Grid.Column="2" Grid.Row="7" x:Name="Motochasy" IsThreeState="True" IsChecked="{x:Null}" Margin="0,20" Grid.ColumnSpan="2"/>
+                    <Button x:Name="AddM1" Content="Добавить" Style="{StaticResource StyleForButtonAddM}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="8" Margin="138,11,159,11" />
+                </Grid>
+            </TabItem.Content>
+        </TabItem>
+        <TabItem x:Name="Amortizaciya" Header="Амортизация">
+            <TabItem.Content>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="Настройка амортизации" HorizontalAlignment="Left" Grid.Row="0" Grid.Column="0" FontSize="20"/>
+                    <Label Content="Вид амортизации" HorizontalAlignment="Right" Margin="5" Grid.Row="1" Grid.Column="0"/>
+                    <WrapPanel Margin="5" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Background="LightGreen">
+                        <Label Content="Галочка -" FontWeight="Bold"/>
+                        <Label Content="Линейный метод"/>
+                    </WrapPanel>
+                    <WrapPanel Margin="5" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Background="LightGreen">
+                        <Label Content="Негалочка -" FontWeight="Bold"/>
+                        <Label Content="Метод уменьшаемого остатка"/>
+                    </WrapPanel>
+                    <Rectangle Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Fill="White" Margin="16"></Rectangle>
+                    <Label Content="Полная стоимость" HorizontalAlignment="Right" Margin="5" Grid.Row="5" Grid.Column="0"/>
+                    <Label Content="Срок службы (лет)" HorizontalAlignment="Right" Margin="5" Grid.Row="6" Grid.Column="0"/>
+                    <Label Content="Коэффициент ускорения" HorizontalAlignment="Right" Margin="5" Grid.Row="7" Grid.Column="0"/>
+                    <Label Content="Дата ввода в эксплуатацию" HorizontalAlignment="Right" Margin="5" Grid.Row="8" Grid.Column="0"/>
+                    <Button Content="Close" Style="{StaticResource StyleForButtonClose}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="9"/>
+
+                    <CheckBox  VerticalAlignment="Center" Grid.Column="1" Grid.Row="1" x:Name="VidAmortizacii" IsThreeState="True" IsChecked="{x:Null}"/>
+                    <WrapPanel x:Name="PolnStoim" Margin="2" Grid.Column="1" Grid.Row="5">
+                        <Label x:Name="Solnce2" Style="{StaticResource OstalnyeTextBoksy}"/>
+                        <TextBox x:Name="PolnayaStoimost" Width="225"/>
+                        <ComboBox x:Name="ComboBoxPolnStoim" Width="90" SelectionChanged="ComboBoxPolnStoim_SelectionChanged">
+                            <ComboBoxItem>1000</ComboBoxItem>
+                            <ComboBoxItem>2000</ComboBoxItem>
+                            <ComboBoxItem>3000</ComboBoxItem>
+                            <ComboBoxItem>4000</ComboBoxItem>
+                            <ComboBoxItem>5000</ComboBoxItem>
+                        </ComboBox>
+                    </WrapPanel>
+                    <WrapPanel x:Name="SrokSl" Margin="2" Grid.Column="1" Grid.Row="6">
+                        <Label x:Name="Solnce3" Style="{StaticResource OstalnyeTextBoksy}"/>
+                        <TextBox x:Name="SrokSluzhby" Width="225"/>
+                        <ComboBox x:Name="ComboBoxSrokSluzhby" Width="90" SelectionChanged="ComboBoxSrokSluzhby_SelectionChanged">
+                            <ComboBoxItem>1</ComboBoxItem>
+                            <ComboBoxItem>2</ComboBoxItem>
+                            <ComboBoxItem>3</ComboBoxItem>
+                            <ComboBoxItem>4</ComboBoxItem>
+                            <ComboBoxItem>5</ComboBoxItem>
+                        </ComboBox>
+                    </WrapPanel>
+                    <WrapPanel x:Name="KoefUsk" Margin="2" Grid.Column="1" Grid.Row="7">
+                        <Label x:Name="Solnce4" Style="{StaticResource OstalnyeTextBoksy}"/>
+                        <TextBox x:Name="KoefficientUskoreniya" Width="225"/>
+                        <ComboBox x:Name="ComboBoxKoefficientUskoreniya" Width="90" SelectionChanged="ComboBoxKoefficientUskoreniya_SelectionChanged">
+                            <ComboBoxItem>1</ComboBoxItem>
+                            <ComboBoxItem>2</ComboBoxItem>
+                            <ComboBoxItem>3</ComboBoxItem>
+                            <ComboBoxItem>4</ComboBoxItem>
+                            <ComboBoxItem>5</ComboBoxItem>
+                        </ComboBox>
+                    </WrapPanel>
+                    <DatePicker  x:Name="DataVvodaVEksp" Grid.Column="1" Grid.Row="8" VerticalAlignment="Center" HorizontalAlignment="Left" Width="200"/>
+                    <Button x:Name="AddM2" Content="Добавить" Style="{StaticResource StyleForButtonAddM}" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="9" />
+                </Grid>
+            </TabItem.Content>
+        </TabItem>
+
+    </TabControl>
+
+
+
+</Window>
