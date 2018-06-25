@@ -233,7 +233,7 @@
                         </WrapPanel>
 
 
-                        <Button x:Name="AddM" Content="Добавить" Style="{StaticResource StyleForButtonAddM}" HorizontalAlignment="Center" />
+                        <Button x:Name="AddM" Content="Добавить" Style="{StaticResource StyleForButtonAddM}" HorizontalAlignment="Center" Click="AddM_Click"/>
 
 
                     </StackPanel>
